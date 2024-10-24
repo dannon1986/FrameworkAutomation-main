@@ -4,7 +4,6 @@ import org.testng.annotations.Test;
 import pages.authorization.AuthorizationPage;
 import services.authorization.AuthorizationService;
 
-
 // Создаём публичный клаас Авторизация (Authorization)
 public class Authorization {
 
@@ -12,8 +11,6 @@ public class Authorization {
   private final AuthorizationService authorizationService = new AuthorizationService();
   private final AuthorizationPage authorizationPage = new AuthorizationPage();
 
-
-//Создаём метод для проверки регистрации с заданными параметрами емейла и пароля.
   @Test
   public void checkAuthorization() {
     String email = "alex20-03sh@mail.ru";
@@ -26,6 +23,5 @@ public class Authorization {
     authorizationPage.setEmail(email);
     authorizationPage.setPassword(password);
     authorizationPage.getEnterButton().click();
-
   }
 }
